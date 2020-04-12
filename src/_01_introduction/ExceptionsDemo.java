@@ -42,9 +42,7 @@ public class ExceptionsDemo {
 		//    Add a void method called terminate that simply calls System.exit(0);
 		class CustomException extends Exception{
 			CustomException ce=new CustomException();
-			void terminate(){
-				System.exit(0);
-			}
+			
 		
 		// 5. Call testMethod2 with a negative number in a try/catch block.
 		//    In the catch block, call the terminate method using the 
@@ -57,9 +55,12 @@ public class ExceptionsDemo {
 		catch(Exception e) {	
 			ce.terminate();
 		}
+		//if I add another }, it has a different error, get help from teacher soon.
+		void terminate(){
+			System.exit(0);
+		}	
 	}
-		
-		}
+
 	public static void testMethod1(int x) throws Exception {
 		if(x < 5) {
 			throw new Exception();
@@ -74,4 +75,5 @@ static void testMethod2(int x) throws Exception {
 	}
 }
 }
+} 
 
