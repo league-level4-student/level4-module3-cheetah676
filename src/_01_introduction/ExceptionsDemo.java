@@ -20,7 +20,7 @@ public class ExceptionsDemo {
 		}
 		catch(Exception e){
 			System.out.println("Error");
-			e.printStackTrace();
+			//e.printStackTrace();
 			//System.out.println(e);
 		}
 		
@@ -40,8 +40,7 @@ public class ExceptionsDemo {
 	}
 		// 3. Create a new class called CustomException that extends Exception.
 		//    Add a void method called terminate that simply calls System.exit(0);
-		class CustomException extends Exception{
-			CustomException ce=new CustomException();
+		public class CustomException extends Exception{{
 			
 		
 		// 5. Call testMethod2 with a negative number in a try/catch block.
@@ -53,13 +52,12 @@ public class ExceptionsDemo {
 		testMethod2(-5);
 		}
 		catch(Exception e) {	
-			ce.terminate();
-		}
-		//if I add another }, it has a different error, get help from teacher soon.
+			terminate();
+		}}}
 		void terminate(){
 			System.exit(0);
 		}	
-	}
+	
 
 	public static void testMethod1(int x) throws Exception {
 		if(x < 5) {
@@ -71,9 +69,9 @@ public class ExceptionsDemo {
 	//    a CustomException if x is negative.
 static void testMethod2(int x) throws Exception {
 	if(x<0) {
-		throw new CustomException();
+		//throw new CustomException();
 	}
 }
 }
-} 
+ 
 
