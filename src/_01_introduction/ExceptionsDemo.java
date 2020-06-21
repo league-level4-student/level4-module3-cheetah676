@@ -51,7 +51,8 @@ public class ExceptionsDemo {
 		try {
 		testMethod2(-5);
 		}
-		catch(Exception e) {	
+		catch(Exception e) {
+			
 			terminate();
 		}}}
 		void terminate(){
@@ -69,9 +70,15 @@ public class ExceptionsDemo {
 	//    a CustomException if x is negative.
 static void testMethod2(int x) throws Exception {
 	if(x<0) {
-		//throw new CustomException();
+		throw CustomException();
 	}
 }
+
+
+	private static Exception CustomException() {
+		System.out.println("hello");
+		return null;
+	}
 }
  
 
